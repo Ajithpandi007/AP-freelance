@@ -59,7 +59,7 @@ const DEFAULT_SERVICES = [
     ],
     threeGeometry: 'icosahedron',
     color: '#6366f1',
-    popular: false
+    popular: true
   },
   {
     id: 'srv-fullstack',
@@ -71,14 +71,14 @@ const DEFAULT_SERVICES = [
     turnaroundDays: 14,
     features: [
       'Express.js Server & REST API',
-      'React 19 Frontend',
+      'React 19 + TypeScript Frontend',
       'MySQL / Firebase / SQL Database Setup',
       'Authentication & Security',
       'Deployment Setup'
     ],
-    threeGeometry: 'torusKnot',
+    threeGeometry: 'dodecahedron',
     color: '#10b981',
-    popular: false
+    popular: true
   },
   {
     id: 'srv-ai',
@@ -97,6 +97,44 @@ const DEFAULT_SERVICES = [
     ],
     threeGeometry: 'cylinder',
     color: '#f59e0b',
+    popular: true
+  },
+  {
+    id: 'srv-mobile',
+    title: 'Cross-Platform Mobile App',
+    category: 'fullstack',
+    shortDescription: 'Seamless React Native / PWA mobile app for iOS and Android.',
+    fullDescription: 'Mobile app engineering with slick gesture navigation, offline caching, push notifications, and API sync.',
+    basePrice: 1600,
+    turnaroundDays: 12,
+    features: [
+      'iOS & Android Support',
+      'Native Gestures & Smooth UI',
+      'Backend API Integration',
+      'App Store Prep Checklist',
+      'Analytics & Offline Sync'
+    ],
+    threeGeometry: 'torusKnot',
+    color: '#a855f7',
+    popular: false
+  },
+  {
+    id: 'srv-backend',
+    title: 'Custom Backend API & Cloud Infrastructure',
+    category: 'fullstack',
+    shortDescription: 'High-speed REST API, microservices, and database optimization.',
+    fullDescription: 'Custom Node.js server architecture, database schemas, automated testing, API documentation, and Cloud deployment.',
+    basePrice: 1100,
+    turnaroundDays: 6,
+    features: [
+      'Node.js & Express API Suite',
+      'MySQL Database Schemas & Indexing',
+      'Swagger / OpenAPI Docs',
+      'Rate Limiting & CORS Setup',
+      'Automated Health Checks'
+    ],
+    threeGeometry: 'cylinder',
+    color: '#3b82f6',
     popular: false
   }
 ];

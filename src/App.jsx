@@ -15,18 +15,24 @@ import { AdminDashboard } from './components/AdminDashboard';
 import { DatabaseAdmin } from './components/DatabaseAdmin';
 import { Footer } from './components/Footer';
 import { ArrowRight } from 'lucide-react';
+import {
+  DEFAULT_SERVICES,
+  DEFAULT_ORDERS,
+  DEFAULT_ANALYTICS,
+  DEFAULT_DB_STATUS
+} from './data/defaultData';
 
 export default function App() {
   const [activeView, setActiveView] = useState('client');
   const [clientTab, setClientTab] = useState('services');
   const [adminTab, setAdminTab] = useState('orders');
 
-  // Backend Data
-  const [services, setServices] = useState([]);
-  const [orders, setOrders] = useState([]);
-  const [analytics, setAnalytics] = useState(null);
-  const [dbStatus, setDbStatus] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // Backend Data with Default Fallbacks
+  const [services, setServices] = useState(DEFAULT_SERVICES);
+  const [orders, setOrders] = useState(DEFAULT_ORDERS);
+  const [analytics, setAnalytics] = useState(DEFAULT_ANALYTICS);
+  const [dbStatus, setDbStatus] = useState(DEFAULT_DB_STATUS);
+  const [loading, setLoading] = useState(false);
 
   // Modals
   const [selectedServiceForOrder, setSelectedServiceForOrder] = useState(null);
@@ -45,12 +51,24 @@ export default function App() {
         fetch('/api/db/status'),
       ]);
 
-      if (srvRes.ok) setServices(await srvRes.json());
-      if (ordRes.ok) setOrders(await ordRes.json());
-      if (anaRes.ok) setAnalytics(await anaRes.json());
-      if (dbRes.ok) setDbStatus(await dbRes.json());
+      if (srvRes.ok) {
+        const data = await srvRes.json();
+        if (Array.isArray(data) && data.length > 0) setServices(data);
+      }
+      if (ordRes.ok) {
+        const data = await ordRes.json();
+        if (Array.isArray(data) && data.length > 0) setOrders(data);
+      }
+      if (anaRes.ok) {
+        const data = await anaRes.json();
+        if (data && typeof data === 'object') setAnalytics(data);
+      }
+      if (dbRes.ok) {
+        const data = await dbRes.json();
+        if (data && typeof data === 'object') setDbStatus(data);
+      }
     } catch (err) {
-      console.error('Failed to fetch data from Express backend API:', err);
+      console.warn('Backend API fetch warning (using client fallback):', err?.message || err);
     } finally {
       setLoading(false);
     }

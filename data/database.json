@@ -55,7 +55,7 @@
       ],
       "threeGeometry": "icosahedron",
       "color": "#6366f1",
-      "popular": false
+      "popular": true
     },
     {
       "id": "srv-fullstack",
@@ -67,14 +67,14 @@
       "turnaroundDays": 14,
       "features": [
         "Express.js Server & REST API",
-        "React 19 Frontend",
+        "React 19 + TypeScript Frontend",
         "MySQL / Firebase / SQL Database Setup",
         "Authentication & Security",
         "Deployment Setup"
       ],
-      "threeGeometry": "torusKnot",
+      "threeGeometry": "dodecahedron",
       "color": "#10b981",
-      "popular": false
+      "popular": true
     },
     {
       "id": "srv-ai",
@@ -93,6 +93,44 @@
       ],
       "threeGeometry": "cylinder",
       "color": "#f59e0b",
+      "popular": true
+    },
+    {
+      "id": "srv-mobile",
+      "title": "Cross-Platform Mobile App",
+      "category": "fullstack",
+      "shortDescription": "Seamless React Native / PWA mobile app for iOS and Android.",
+      "fullDescription": "Mobile app engineering with slick gesture navigation, offline caching, push notifications, and API sync.",
+      "basePrice": 1600,
+      "turnaroundDays": 12,
+      "features": [
+        "iOS & Android Support",
+        "Native Gestures & Smooth UI",
+        "Backend API Integration",
+        "App Store Prep Checklist",
+        "Analytics & Offline Sync"
+      ],
+      "threeGeometry": "torusKnot",
+      "color": "#a855f7",
+      "popular": false
+    },
+    {
+      "id": "srv-backend",
+      "title": "Custom Backend API & Cloud Infrastructure",
+      "category": "fullstack",
+      "shortDescription": "High-speed REST API, microservices, and database optimization.",
+      "fullDescription": "Custom Node.js server architecture, database schemas, automated testing, API documentation, and Cloud deployment.",
+      "basePrice": 1100,
+      "turnaroundDays": 6,
+      "features": [
+        "Node.js & Express API Suite",
+        "MySQL Database Schemas & Indexing",
+        "Swagger / OpenAPI Docs",
+        "Rate Limiting & CORS Setup",
+        "Automated Health Checks"
+      ],
+      "threeGeometry": "cylinder",
+      "color": "#3b82f6",
       "popular": false
     }
   ],
@@ -112,8 +150,8 @@
       "progressPercent": 65,
       "deliverableUrl": "https://github.com/freelancer/vertex-3d-demo",
       "privateNotes": "Initial 3D mesh loads fast. Working on lighting shaders.",
-      "createdAt": "2026-08-01T13:31:54.722Z",
-      "updatedAt": "2026-08-05T13:31:54.725Z"
+      "createdAt": "2026-08-01T11:32:46.751Z",
+      "updatedAt": "2026-08-05T11:32:46.751Z"
     },
     {
       "id": "ORD-8930",
@@ -125,13 +163,13 @@
       "category": "fullstack",
       "budget": 2200,
       "deadline": "2026-09-01",
-      "requirements": "Build a real-time order dashboard with Express backend and MySQL/Firebase persistent storage for client tracking.",
+      "requirements": "Build a real-time order dashboard with Express backend and MySQL persistent storage for client tracking.",
       "status": "review",
       "progressPercent": 90,
       "deliverableUrl": "https://nextech-demo.run.app",
       "privateNotes": "Waiting for client review on final API endpoints.",
-      "createdAt": "2026-07-27T13:31:54.725Z",
-      "updatedAt": "2026-08-04T13:31:54.725Z"
+      "createdAt": "2026-07-27T11:32:46.751Z",
+      "updatedAt": "2026-08-04T11:32:46.751Z"
     },
     {
       "id": "ORD-9104",
@@ -148,8 +186,8 @@
       "progressPercent": 100,
       "deliverableUrl": "https://github.com/freelancer/gemini-proposal-engine",
       "privateNotes": "Delivered fully tested API endpoints and React components.",
-      "createdAt": "2026-07-19T13:31:54.725Z",
-      "updatedAt": "2026-08-02T13:31:54.725Z"
+      "createdAt": "2026-07-19T11:32:46.751Z",
+      "updatedAt": "2026-08-02T11:32:46.751Z"
     }
   ],
   "messages": [
@@ -162,7 +200,7 @@
       "attachments": [
         "https://example.com/assets/brand-guide.pdf"
       ],
-      "createdAt": "2026-08-01T13:36:54.725Z"
+      "createdAt": "2026-08-01T11:37:46.751Z"
     },
     {
       "id": "msg-102",
@@ -171,7 +209,7 @@
       "senderName": "Freelance Studio",
       "text": "Thanks Sarah! I have set up the 3D scene architecture and particle geometry. You can review the initial draft link above.",
       "attachments": [],
-      "createdAt": "2026-08-02T13:31:54.725Z"
+      "createdAt": "2026-08-02T11:32:46.751Z"
     },
     {
       "id": "msg-103",
@@ -180,7 +218,7 @@
       "senderName": "Freelance Studio",
       "text": "David, the Express REST backend and MySQL database structure are complete! Ready for final staging review.",
       "attachments": [],
-      "createdAt": "2026-08-04T13:31:54.725Z"
+      "createdAt": "2026-08-04T11:32:46.751Z"
     }
   ]
 }
