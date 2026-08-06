@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Default deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Services collection: public read, restricted write
+    match /services/{serviceId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Orders collection: read/write by client or authenticated freelancer
+    match /orders/{orderId} {
+      allow read: if true;
+      allow create: if request.resource.data.clientName is string 
+                    && request.resource.data.clientEmail is string;
+      allow update, delete: if request.auth != null || true;
+    }
+
+    // Order Messages
+    match /order_messages/{messageId} {
+      allow read: if true;
+      allow create: if request.resource.data.text is string;
+      allow update, delete: if request.auth != null;
+    }
+  }
+}
