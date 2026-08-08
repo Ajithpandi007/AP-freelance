@@ -1,6 +1,0 @@
-{
-  "name": "AP Web Development Freelance Studio",
-  "description": "AP Web Development freelance platform featuring modern UI/UX design, custom creation for all types of websites, 3D interactive portfolio, and Express database order tracking.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
